@@ -1,27 +1,48 @@
-# lottoNumbers
+# Lotto Numbers Filter
 
-This project provides a script to help you filter and check lottery tickets based on numbers you select.
+A Python script to help you filter and check lottery tickets based on numbers you select.
 
-## How It Works
+## Overview
 
-1. **Ticket File**  
-   - Store your lottery tickets in a file named `tick_nums.txt`.
-   - Each line represents a ticket and should contain 6 numbers separated by spaces (e.g., `5 12 23 34 45 56`).
-   - You can have any number of tickets (rows) in the file.
+This script reads a list of lottery tickets from a file and allows you to interactively filter them by entering numbers. After each number, only tickets containing all selected numbers remain. When 6 numbers are selected, the script displays the matching ticket.
 
-2. **Script Functionality**  
-   - The script reads your tickets from `tick_nums.txt`.
-   - You will be prompted to enter numbers one at a time.
-   - After each number, the script filters and displays only the tickets that contain all the numbers you have entered so far.
-   - After 6 numbers are entered, the script shows the matching ticket(s) or notifies you if no tickets match.
+## Features
+
+- Reads tickets from a plain text file (`tick_nums.txt`)
+- Interactive filtering based on user input
+- Displays possible tickets after each selection
+- Shows the matching ticket after 6 numbers are entered
+
+## Requirements
+
+- Python 3.x
 
 ## Usage
 
-1. Place your tickets in `tick_nums.txt` in the project directory.
-2. Run the script:
-3. Follow the prompts to enter your selected numbers.
+1. **Prepare your tickets:**
+    - Create a file named `tick_nums.txt` in the same directory as the script.
+    - Each line should contain exactly 6 numbers separated by spaces.  
+      Example:
+      ```
+      5 12 23 34 45 56
+      1 2 3 4 5 6
+      ```
 
-## Notes
+2. **Run the script:**
+    ```sh
+    python [Lotto_Ticket.py](http://_vscodecontentref_/0)
+    ```
 
-- The script expects each ticket to have exactly 6 numbers separated by spaces.
-- You can modify the number of tickets or numbers per ticket as needed, but the script is currently set up for 6-number tickets.
+3. **Follow the prompts:**
+    - Enter one number at a time when prompted.
+    - After each entry, the script will show the remaining possible tickets.
+    - After 6 numbers, the script will display the matching ticket or notify you if no tickets match.
+
+## File Format Guidelines
+
+- Each ticket must have exactly 6 numbers.
+- Numbers must be separated by single spaces.
+- No blank lines or extra spaces.
+- All numbers should be valid integers.
+
+## Example `tick_nums.txt`
